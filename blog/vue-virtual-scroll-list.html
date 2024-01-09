@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue虚拟滚动（vue-virtual-scroll-list） | myblog</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="技术博客">
+    <link rel="preload" href="/vuepressblog/assets/css/0.styles.e07c7e16.css" as="style"><link rel="preload" href="/vuepressblog/assets/js/app.021642e2.js" as="script"><link rel="preload" href="/vuepressblog/assets/js/2.98b326bc.js" as="script"><link rel="preload" href="/vuepressblog/assets/js/18.1cb2692d.js" as="script"><link rel="prefetch" href="/vuepressblog/assets/js/10.e800d49d.js"><link rel="prefetch" href="/vuepressblog/assets/js/11.69e8582a.js"><link rel="prefetch" href="/vuepressblog/assets/js/12.856711db.js"><link rel="prefetch" href="/vuepressblog/assets/js/13.e7cc01ac.js"><link rel="prefetch" href="/vuepressblog/assets/js/14.b2d45490.js"><link rel="prefetch" href="/vuepressblog/assets/js/15.f9c957ec.js"><link rel="prefetch" href="/vuepressblog/assets/js/16.f5d80386.js"><link rel="prefetch" href="/vuepressblog/assets/js/17.1c1e2527.js"><link rel="prefetch" href="/vuepressblog/assets/js/19.9243d857.js"><link rel="prefetch" href="/vuepressblog/assets/js/3.efe1fa85.js"><link rel="prefetch" href="/vuepressblog/assets/js/4.90e6410b.js"><link rel="prefetch" href="/vuepressblog/assets/js/5.a178c381.js"><link rel="prefetch" href="/vuepressblog/assets/js/6.262d752d.js"><link rel="prefetch" href="/vuepressblog/assets/js/7.4de95d1b.js"><link rel="prefetch" href="/vuepressblog/assets/js/8.9282f287.js"><link rel="prefetch" href="/vuepressblog/assets/js/9.8bdb9a19.js">
+    <link rel="stylesheet" href="/vuepressblog/assets/css/0.styles.e07c7e16.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepressblog/" class="home-link router-link-active"><!----> <span class="site-name">myblog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepressblog/blog/.html#1" class="nav-link">
+  待定
+</a></div><div class="nav-item"><a href="/vuepressblog/blog/.html#2" class="nav-link">
+  aboutme
+</a></div><div class="nav-item"><a href="/vuepressblog/blog/.html#3" class="nav-link">
+  github
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepressblog/blog/.html#1" class="nav-link">
+  待定
+</a></div><div class="nav-item"><a href="/vuepressblog/blog/.html#2" class="nav-link">
+  aboutme
+</a></div><div class="nav-item"><a href="/vuepressblog/blog/.html#3" class="nav-link">
+  github
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepressblog/blog/" aria-current="page" class="sidebar-link">home</a></li><li><a href="/vuepressblog/blog/elementui-Form.html" class="sidebar-link">elementui</a></li><li><a href="/vuepressblog/blog/elementui-loading.html" class="sidebar-link">解析elementui 中的v-loading指令</a></li><li><a href="/vuepressblog/blog/createObj.html" class="sidebar-link">使用Object 构造函数创建对象</a></li><li><a href="/vuepressblog/blog/http常用状态码.html" class="sidebar-link">http常用状态码</a></li><li><a href="/vuepressblog/blog/js 防抖debounce与节流throttle.html" class="sidebar-link">js 防抖debounce与节流throttle</a></li><li><a href="/vuepressblog/blog/LinuxData.html" class="sidebar-link">linux</a></li><li><a href="/vuepressblog/blog/promise.html" class="sidebar-link">promise</a></li><li><a href="/vuepressblog/blog/reduce.html" class="sidebar-link">reduce</a></li><li><a href="/vuepressblog/blog/linuxNginx自启动.html" class="sidebar-link">linuxNginx自启动</a></li><li><a href="/vuepressblog/blog/reflow&amp;repaint.html" class="sidebar-link">回流与重绘</a></li><li><a href="/vuepressblog/blog/固定表头和列的表格.html" class="sidebar-link">表格固定表头和列</a></li><li><a href="/vuepressblog/blog/vue-virtual-scroll-list.html" aria-current="page" class="active sidebar-link">vue虚拟滚动（vue-virtual-scroll-list）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepressblog/blog/vue-virtual-scroll-list.html#背景" class="sidebar-link">背景</a></li><li class="sidebar-sub-header"><a href="/vuepressblog/blog/vue-virtual-scroll-list.html#用法" class="sidebar-link">用法</a></li><li class="sidebar-sub-header"><a href="/vuepressblog/blog/vue-virtual-scroll-list.html#原理" class="sidebar-link">原理</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue虚拟滚动-vue-virtual-scroll-list"><a href="#vue虚拟滚动-vue-virtual-scroll-list" class="header-anchor">#</a> vue虚拟滚动（vue-virtual-scroll-list）</h1> <h2 id="背景"><a href="#背景" class="header-anchor">#</a> 背景</h2> <p>​       在项目中有一个sku表（是一个尺码和颜色乘积的表格），假如有10个颜色，20个尺码，那这个sku表就会有200行。有一个客户有100个颜色的需求，100个颜色的时候如果有5个尺码，就会有500行，这样会使页面很卡，于是找到了vue-virtual-scroll-list这个插件。</p> <h2 id="用法"><a href="#用法" class="header-anchor">#</a> 用法</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;virtual-list style=&quot;height: 360px; overflow-y: auto;&quot; // make list scrollable
+      :data-key=&quot;'id'&quot;
+      :data-sources=&quot;items&quot;
+      :data-component=&quot;itemComponent&quot;
+    /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+  import Item from './Item'
+  import VirtualList from 'vue-virtual-scroll-list'
+ function createData(len) {
+     const arr = []
+     for (let index = 0; index &lt; len; index++) {
+         const obj = { id: index, text: Math.random() }
+         arr.push(obj)
+     }
+     return arr
+ }
+  export default {
+    name: 'root',
+    data () {
+      return {
+        itemComponent: Item,
+        items: createData(200)
+      }
+    },
+    components: { 'virtual-list': VirtualList }
+  }
+&lt;/script&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>// item
+&lt;template&gt;
+  &lt;div&gt;每一行的内容&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+  export default {
+    name: 'item-component',
+    props: {
+      index: { // 每一行的索引
+        type: Number
+      },
+      source: { // 每一行的内容
+        type: Object,
+        default () {
+          return {}
+        }
+      }
+    }
+  }
+&lt;/script&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="参数"><a href="#参数" class="header-anchor">#</a> 参数</h3> <table><thead><tr><th><strong>Prop</strong></th> <th><strong>Type</strong></th> <th><strong>Description</strong></th></tr></thead> <tbody><tr><td><code>data-key</code></td> <td>String|Function</td> <td>从<code>data-sources</code>每个数据对象中获取唯一键。或每个函数都调用<code>data-source</code>并返回其唯一键。在中，其值<strong>必须唯一</strong><code>data-sources</code>，用于标识商品尺寸。</td></tr> <tr><td><code>data-sources</code></td> <td>Array[Object]</td> <td>列表数据，每一行都必须有一个唯一的id(data-key)</td></tr> <tr><td><code>data-component</code></td> <td>Component</td> <td>每一行的子组件</td></tr> <tr><td><code>keeps</code></td> <td>Number</td> <td>默认30个，默认渲染的个数</td></tr> <tr><td><code>extra-props</code></td> <td>Object</td> <td>默认{} data-component组件的额外props通过改属性传入,内部已有source和index两个</td></tr> <tr><td><code>estimate-size</code></td> <td>Number</td> <td>默认50，每一行的高度，如果接近平均大小，则滚动条长度看起来会更准确。</td></tr> <tr><td><code>scroll</code></td> <td>事件</td> <td>滚动时发出param <code>(event, range)</code>。</td></tr></tbody></table> <p>剩下的参数  https://www.npmjs.com/package/vue-virtual-scroll-list</p> <h2 id="原理"><a href="#原理" class="header-anchor">#</a> 原理</h2> <img src="/vuepressblog/vue-virtual-scroll-list.png" alt="mixureSecure"> <p>如上图，他只渲染keeps传入的个数，滚动时通过改变padding的值来模拟滚动，里面的每一个item在滚动时动态替换里面的值</p> <p>核心源码如下
+<img src="/vuepressblog/vue-virtual-scroll-list原理.png" alt="mixureSecure"></p> <p>永远之渲染props的keeps传入的个数，所以这样不会卡</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepressblog/blog/固定表头和列的表格.html" class="prev">
+        表格固定表头和列
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/vuepressblog/assets/js/app.021642e2.js" defer></script><script src="/vuepressblog/assets/js/2.98b326bc.js" defer></script><script src="/vuepressblog/assets/js/18.1cb2692d.js" defer></script>
+  </body>
+</html>

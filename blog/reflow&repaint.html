@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>回流与重绘 | myblog</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="技术博客">
+    <link rel="preload" href="/vuepressblog/assets/css/0.styles.e07c7e16.css" as="style"><link rel="preload" href="/vuepressblog/assets/js/app.021642e2.js" as="script"><link rel="preload" href="/vuepressblog/assets/js/2.98b326bc.js" as="script"><link rel="preload" href="/vuepressblog/assets/js/17.1c1e2527.js" as="script"><link rel="prefetch" href="/vuepressblog/assets/js/10.e800d49d.js"><link rel="prefetch" href="/vuepressblog/assets/js/11.69e8582a.js"><link rel="prefetch" href="/vuepressblog/assets/js/12.856711db.js"><link rel="prefetch" href="/vuepressblog/assets/js/13.e7cc01ac.js"><link rel="prefetch" href="/vuepressblog/assets/js/14.b2d45490.js"><link rel="prefetch" href="/vuepressblog/assets/js/15.f9c957ec.js"><link rel="prefetch" href="/vuepressblog/assets/js/16.f5d80386.js"><link rel="prefetch" href="/vuepressblog/assets/js/18.1cb2692d.js"><link rel="prefetch" href="/vuepressblog/assets/js/19.9243d857.js"><link rel="prefetch" href="/vuepressblog/assets/js/3.efe1fa85.js"><link rel="prefetch" href="/vuepressblog/assets/js/4.90e6410b.js"><link rel="prefetch" href="/vuepressblog/assets/js/5.a178c381.js"><link rel="prefetch" href="/vuepressblog/assets/js/6.262d752d.js"><link rel="prefetch" href="/vuepressblog/assets/js/7.4de95d1b.js"><link rel="prefetch" href="/vuepressblog/assets/js/8.9282f287.js"><link rel="prefetch" href="/vuepressblog/assets/js/9.8bdb9a19.js">
+    <link rel="stylesheet" href="/vuepressblog/assets/css/0.styles.e07c7e16.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepressblog/" class="home-link router-link-active"><!----> <span class="site-name">myblog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepressblog/blog/.html#1" class="nav-link">
+  待定
+</a></div><div class="nav-item"><a href="/vuepressblog/blog/.html#2" class="nav-link">
+  aboutme
+</a></div><div class="nav-item"><a href="/vuepressblog/blog/.html#3" class="nav-link">
+  github
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepressblog/blog/.html#1" class="nav-link">
+  待定
+</a></div><div class="nav-item"><a href="/vuepressblog/blog/.html#2" class="nav-link">
+  aboutme
+</a></div><div class="nav-item"><a href="/vuepressblog/blog/.html#3" class="nav-link">
+  github
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepressblog/blog/" aria-current="page" class="sidebar-link">home</a></li><li><a href="/vuepressblog/blog/elementui-Form.html" class="sidebar-link">elementui</a></li><li><a href="/vuepressblog/blog/elementui-loading.html" class="sidebar-link">解析elementui 中的v-loading指令</a></li><li><a href="/vuepressblog/blog/createObj.html" class="sidebar-link">使用Object 构造函数创建对象</a></li><li><a href="/vuepressblog/blog/http常用状态码.html" class="sidebar-link">http常用状态码</a></li><li><a href="/vuepressblog/blog/js 防抖debounce与节流throttle.html" class="sidebar-link">js 防抖debounce与节流throttle</a></li><li><a href="/vuepressblog/blog/LinuxData.html" class="sidebar-link">linux</a></li><li><a href="/vuepressblog/blog/promise.html" class="sidebar-link">promise</a></li><li><a href="/vuepressblog/blog/reduce.html" class="sidebar-link">reduce</a></li><li><a href="/vuepressblog/blog/linuxNginx自启动.html" class="sidebar-link">linuxNginx自启动</a></li><li><a href="/vuepressblog/blog/reflow&amp;repaint.html" aria-current="page" class="active sidebar-link">回流与重绘</a></li><li><a href="/vuepressblog/blog/固定表头和列的表格.html" class="sidebar-link">表格固定表头和列</a></li><li><a href="/vuepressblog/blog/vue-virtual-scroll-list.html" class="sidebar-link">vue虚拟滚动（vue-virtual-scroll-list）</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="回流与重绘"><a href="#回流与重绘" class="header-anchor">#</a> 回流与重绘</h1> <p><strong>浏览器渲染过程</strong></p> <ol><li>解析HTML生成DOM树。</li> <li>解析CSS生成CSSOM规则树。</li> <li>将DOM树与CSSOM规则树合并在一起生成渲染树。</li> <li>遍历渲染树开始布局，计算每个节点的位置大小信息。</li> <li>将渲染树每个节点绘制到屏幕。</li></ol> <p><strong>回流(reflow)</strong>:  当浏览器发现某个部分发生了变化影响了布局(某个元素的显示与隐藏,宽度高度的改变)，需要重新渲染。也就是会导致浏览器重新生成渲染树，reflow 会从根节点开始递归往下，依次计算所有的结点几何尺寸和位置。</p> <p><strong>重绘(repaint)</strong>: 改变某个元素的背景色、文字颜色、边框颜色等等不影响它周围或内部布局的属性时，会发生重绘，重绘简单的说就是重新绘制，将渲染树每个节点绘制到屏幕上。</p> <p><strong>不同点</strong>: 回流一定会重绘，而重绘不一定会引起回流</p> <p><strong>注意点</strong></p> <ol><li><code>display:none</code> 会触发 reflow，而 <code>visibility:hidden</code> 只会触发 repaint，因为没有发生位置变化。</li> <li>有些情况下，比如修改了元素的样式，浏览器并不会立刻 reflow 或 repaint 一次，而是会把这样的操作积攒一批，然后做一次 reflow，这又叫异步 reflow 或增量异步 reflow。</li> <li>有些情况下，比如 resize 窗口，改变了页面默认的字体等。对于这些操作，浏览器会马上进行 reflow。</li> <li>使用css3硬件加速，可以让transform、opacity、filters这些动画不会引起回流重绘</li> <li>对于动画的其它属性，比如background-color这些，还是会引起回流重绘的，不过它还是可以提升这些动画的性能。</li></ol> <p>如何减少重排重绘？</p> <ol><li>用 JavaScript 修改样式时，最好不要直接写样式，而是替换 class 来改变样式(合并多次对DOM和样式的修改，然后一次性修改)。</li> <li>如果要对 DOM 元素执行一系列操作，可以将 DOM 元素脱离文档流，修改完成后，再将它带回文档。</li> <li>对于复杂动画效果,使用绝对定位让其脱离文档流</li></ol> <p>参考链接：https://segmentfault.com/a/1190000017329980</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepressblog/blog/linuxNginx自启动.html" class="prev">
+        linuxNginx自启动
+      </a></span> <span class="next"><a href="/vuepressblog/blog/固定表头和列的表格.html">
+        表格固定表头和列
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/vuepressblog/assets/js/app.021642e2.js" defer></script><script src="/vuepressblog/assets/js/2.98b326bc.js" defer></script><script src="/vuepressblog/assets/js/17.1c1e2527.js" defer></script>
+  </body>
+</html>
